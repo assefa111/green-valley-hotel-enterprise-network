@@ -385,3 +385,21 @@ It also establishes a foundation for future projects involving dynamic routing, 
 
 **Tools:** Cisco Packet Tracer, Cisco IOS CLI  
 **Focus:** CCNA 200-301, Enterprise Networking, Network Security, Troubleshooting
+
+
+
+
+
+## Network Verification Evidence
+
+### VLAN Configuration
+![VLAN Verification](screenshots/vlan-verification.png)
+
+### Rapid PVST+ Verification
+![STP Verification](screenshots/stp-verification.png)
+
+### Routing Verification
+![Routing Verification](screenshots/routing-verification.png)
+
+### NTP Synchronization
+![NTP Verification](screenshots/ntp-verification.png)
