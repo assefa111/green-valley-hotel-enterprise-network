@@ -339,9 +339,20 @@ green-valley-hotel-enterprise-network/
     └── ntp-verification.png
 ```
 
-*Files and screenshots should be added from the completed Packet Tracer project.*
+## Network Verification Evidence
 
----
+### VLAN Configuration
+![VLAN Verification](screenshots/vlan-verification.png)
+
+### Rapid PVST+ Verification
+![STP Verification](screenshots/stp-verification.png)
+
+### Routing Verification
+![Routing Verification](screenshots/routing-verification.png)
+
+### NTP Synchronization
+![NTP Verification](screenshots/ntp-verification.png)
+
 
 ## 📚 9. Skills Demonstrated
 
@@ -387,19 +398,3 @@ It also establishes a foundation for future projects involving dynamic routing, 
 **Focus:** CCNA 200-301, Enterprise Networking, Network Security, Troubleshooting
 
 
-
-
-
-## Network Verification Evidence
-
-### VLAN Configuration
-![VLAN Verification](screenshots/vlan-verification.png)
-
-### Rapid PVST+ Verification
-![STP Verification](screenshots/stp-verification.png)
-
-### Routing Verification
-![Routing Verification](screenshots/routing-verification.png)
-
-### NTP Synchronization
-![NTP Verification](screenshots/ntp-verification.png)
