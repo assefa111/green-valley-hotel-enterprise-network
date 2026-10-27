@@ -84,9 +84,12 @@ The enterprise network follows a hierarchical design with centralized routing, a
 
 The SW1–SW2–SW3 triangle provides redundant Layer 2 connectivity. Rapid PVST+ prevents switching loops by placing a redundant port into a non-forwarding state.
 
-**Visual Topology:** Add a screenshot of the completed Cisco Packet Tracer network here.
+## 🏗️ Network Topology
 
-`![Green Valley Hotel Network Topology](screenshots/topology.png)`
+The following diagram shows the complete Green Valley Hotel 2.0
+enterprise network implemented in Cisco Packet Tracer.
+
+![Green Valley Hotel 2.0 Network Topology](screenshots/topology.png)
 
 ---
 
