@@ -55,32 +55,10 @@ The enterprise network follows a hierarchical design with centralized routing, a
 
 ### Logical Network Topology
 
-```text
-                     SIMULATED INTERNET
-                             |
-                            ISP
-                             |
-                       203.0.113.2/30
-                            R1
-                      Cisco 2911 Router
-                 Inter-VLAN Routing / DHCP
-                     NAT/PAT / ACLs
-                             |
-                        802.1Q Trunk
-                             |
-                           SW1
-                    Core Switch / STP Root
-                         /       \
-                        /         \
-                      SW2---------SW3
-                   Access SW    Access SW
-                       |            |
-                 Staff / Admin   Guest PCs
-                                Management PC
-                                DNS/HTTP Server
-                                NMS Server
-                                WLC + AP1 + AP2
-```
+The following diagram illustrates the logical architecture of the
+Green Valley Hotel 2.0 Enterprise Network.
+
+![Green Valley Hotel 2.0 Logical Network Architecture](logical-architecture.png)
 
 The SW1–SW2–SW3 triangle provides redundant Layer 2 connectivity. Rapid PVST+ prevents switching loops by placing a redundant port into a non-forwarding state.
 
