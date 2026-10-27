@@ -1,0 +1,175 @@
+SW3>
+SW3>en
+SW3#show running-config
+Building configuration...
+
+Current configuration : 4427 bytes
+!
+version 15.0
+service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname SW3
+!
+!
+!
+no ip domain-lookup
+!
+ip arp inspection vlan 30
+!
+ip dhcp snooping vlan 10,20,30,40,50
+no ip dhcp snooping information option
+ip dhcp snooping
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+interface FastEthernet0/1
+ description link to guestPC1
+ switchport access vlan 30
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+ switchport port-security violation restrict 
+ switchport port-security mac-address sticky 0005.5E97.EABB
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/2
+ description link to SW1
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 10,20,30,40,50,99
+ ip arp inspection trust
+ ip dhcp snooping trust
+ switchport mode trunk
+!
+interface FastEthernet0/3
+ description link to redundency SW2
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 10,20,30,40,50,99
+ ip arp inspection trust
+ ip dhcp snooping trust
+ switchport mode trunk
+!
+interface FastEthernet0/4
+ description link to guestPC2
+ switchport access vlan 30
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+ switchport port-security violation restrict 
+ switchport port-security mac-address sticky 0060.70C6.DED7
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/5
+ description link to managPC
+ switchport access vlan 10
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+ switchport port-security violation restrict 
+ switchport port-security mac-address sticky 0007.EC08.9907
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/6
+ description link to server
+ switchport access vlan 50
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/7
+ description link to LAP1
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+spanning-tree bpduguard enable
+!
+interface FastEthernet0/8
+ description link to LAP2
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/9
+ description NMS_SERVER
+ switchport access vlan 50
+ switchport mode access
+ spanning-tree portfast
+!
+interface FastEthernet0/10
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/11
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/12
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/13
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/14
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/15
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/16
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/17
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/18
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/19
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/20
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/21
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/22
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/23
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet0/1
+ description link to WLC
